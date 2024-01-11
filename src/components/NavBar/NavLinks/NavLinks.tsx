@@ -6,7 +6,8 @@ import React from "react";
 const links = [
   { title: "Home", path: "/" },
   { title: "About", path: "/about" },
-];``
+];
+``;
 
 const NavLinks = ({
   open,
@@ -18,7 +19,7 @@ const NavLinks = ({
   const pathname = usePathname();
 
   const defaultLinkContainerStyles =
-    "fixed top-14 bg-slate-950 p-4 left-0 h-screen w-9/12 gap-4 z-10";
+    "fixed py-16 top-0 bg-slate-950 p-4 left-0 h-screen w-9/12 gap-4 z-[1]";
 
   const mediumLinkContainerStyles =
     "md:static md:flex-row md:h-auto md:w-auto md:p-0";

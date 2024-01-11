@@ -3,6 +3,8 @@ import "./globals.css";
 import NavBar from "@/components/NavBar/NavBar";
 import Footer from "@/components/Footer/Footer";
 import BgBlur from "@/components/NavBar/BgBlur/BgBlur";
+import { Provider } from "react-redux";
+import { store } from "@/redux/store/store";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="flex flex-col min-h-screen bg-slate-800 text-slate-50">
+      <body className="flex flex-col min-h-screen bg-slate-800 text-slate-50 min-w-80">
         <BgBlur />
         <NavBar />
         <>{children}</>

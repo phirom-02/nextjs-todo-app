@@ -8,7 +8,7 @@ const CTAButton = ({ size = "lg" }: { size?: "sm" | "lg" }) => {
   const pathname = usePathname();
 
   const buttonStyles = `rounded-md bg-orange-400 capitalize shadow-lg hover:bg-orange-500 ${
-    pathname === "/todo-app" && "hidden"
+    pathname.startsWith("/todo-app") && "hidden"
   }`;
 
   const smButtonStyles = `${buttonStyles} py-2 px-4 font-md`;
@@ -20,7 +20,7 @@ const CTAButton = ({ size = "lg" }: { size?: "sm" | "lg" }) => {
       className={size === "sm" ? smButtonStyles : lgButtonStyles}
       onClick={() => router.push("/todo-app")}
     >
-      <span>go to app</span>
+      <span>use app</span>
       <>{size === "lg" && <ArrowRight />}</>
     </button>
   );

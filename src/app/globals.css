@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.masonry {
+  break-inside: avoid;
+}
+
+.masonry-grid {
+  display: flex;
+  width: auto;
+  gap: 16px;
+}
+
+.masonry-column {
+  background-clip: padding-box;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 1000px;
+}

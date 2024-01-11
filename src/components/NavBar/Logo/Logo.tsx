@@ -8,7 +8,7 @@ const Logo = () => {
   const router = useRouter();
 
   return (
-    <div className="flex-1">
+    <div className="flex-1 z-[2]">
       <p
         className="cursor-pointer font-bold md:text-2xl w-fit"
         onClick={() => router.push("/")}
